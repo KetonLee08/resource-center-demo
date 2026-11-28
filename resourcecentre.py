@@ -159,8 +159,4 @@ def go():
     print("Good bye.")
 
 
-def tag_unused():
-    return "___never___"
-
-
 go()
