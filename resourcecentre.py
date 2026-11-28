@@ -45,6 +45,11 @@ def menu():
             print("Invalid choice, please enter again.\n")
     return choice
 
+def print_header(message):
+    print("")
+    print("==============================================")
+    print(message)
+    print("==============================================")
 
 
 def go():
@@ -52,10 +57,7 @@ def go():
     while choice != MENU_MIN:
 
         if choice == 1:
-            print("")
-            print("==============================================")
-            print("Add an item")
-            print("==============================================")
+            print_header("Add an item")
             print("\nItem types:")
             print("1. Digital Camera")
             print("2. Laptop")
@@ -74,10 +76,7 @@ def go():
                 print("Invalid item type.")
 
         elif choice == 2:
-            print("")
-            print("==============================================")
-            print("Display available items")
-            print("==============================================")
+            print_header("Display available items")
             for i in cameras:
                 if i[2] == AVAILABLE:
                     print(i[0], i[1])
@@ -86,10 +85,7 @@ def go():
                     print(i[0], i[1])
 
         elif choice == 3:
-            print("")
-            print("==============================================")
-            print("Loan an item")
-            print("==============================================")
+            print_header("Loan an item")
             print("\nItem types:")
             print("1. Digital Camera")
             print("2. Laptop")
@@ -122,10 +118,7 @@ def go():
                 print("Invalid item type.")
 
         elif choice == 4:
-            print("")
-            print("==============================================")
-            print("Return an item")
-            print("==============================================")
+            print_header("Return an item")
             print("\nItem types:")
             print("1. Digital Camera")
             print("2. Laptop")
